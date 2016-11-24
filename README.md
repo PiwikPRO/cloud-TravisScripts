@@ -3,6 +3,14 @@ Travis Scripts
 
 Goal of this project is to share simple bash scripts that could used directly in the build process.
 
+## How to use the script in .travis.yml ?
+
+Go to the github and open you specific script that you would like to use in raw mode. Copy URL and past to your .travis.yml file in the following way:
+
+```
+curl -s https://raw.githubusercontent.com/PiwikPRO/cloud-TravisScripts/master/docker_login_ecr.sh | bash
+```
+
 ## Scripts
 
 ### Login using docker tool to AWS ECR private registry
