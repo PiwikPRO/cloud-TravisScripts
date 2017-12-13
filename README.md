@@ -27,5 +27,8 @@ This script configures aws cli tool with given credentials and requests docker's
 
 ## Change-log
 
+* __0.1.1__
+  - Added `--no-include-email` in docker_login_ecr.sh
+
 * __0.1.0__
   - initial version
