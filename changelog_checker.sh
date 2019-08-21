@@ -2,6 +2,14 @@
 
 set -e
 
+commitMessage=$(git log -1 --pretty=%B)
+skipCl="skip-cl"
+
+case "$commitMessage" in
+    *"$skipCl"*)    echo 'Changelog checking is skipped...'; exit  ;;
+    *)              echo 'False' ;;
+esac
+
 if [ -z "${TRAVIS_PULL_REQUEST_BRANCH}" ]; then
     echo This is not a PR, skipping
 
