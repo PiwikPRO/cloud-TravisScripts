@@ -2,7 +2,7 @@
 
 set -e
 
-commitMessage=$(git log -1 --pretty=%B)
+commitMessage=$(git log -2 --pretty=%B)
 skipCl="skip-cl"
 
 case "$commitMessage" in
