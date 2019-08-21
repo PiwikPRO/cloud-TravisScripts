@@ -7,7 +7,7 @@ skipCl="skip-cl"
 
 case "$commitMessage" in
     *"$skipCl"*)    echo 'Changelog checking is skipped...'; exit  ;;
-    *)              echo 'False' ;;
+    *)               ;;
 esac
 
 if [ -z "${TRAVIS_PULL_REQUEST_BRANCH}" ]; then
