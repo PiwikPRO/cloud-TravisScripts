@@ -21,7 +21,8 @@ def check_if_forced_skipping():
 
 def check_changelog():
     if subprocess.run(
-            ["git", "diff", "--diff-filter=AM", "HEAD..${TRAVIS_BRANCH}", "--exit-code", "-s", "--", "CHANGELOG.md"],
+            ["git", "diff", "--diff-filter=AM", f"HEAD..{os.getenv('TRAVIS_BRANCH')}",
+             "--exit-code", "-s", "--", "CHANGELOG.md"],
             stdout=DEVNULL, stderr=DEVNULL
     ).returncode:
         print("FAILED! Please update ./CHANGELOG.md file")
